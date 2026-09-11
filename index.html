@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uove English</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="logo">Uove<span>English</span></div>
+  <button class="nav active" data-page="home">🏠 الرئيسية</button>
+  <button class="nav" data-page="words">📚 كلماتي</button>
+  <button class="nav" data-page="practice">🧠 التدريب</button>
+  <button class="nav" data-page="progress">📊 التقدم</button>
+</aside>
+
+<main>
+<header><h2>Uove English</h2><button id="themeBtn">🌙</button></header>
+
+<section id="home" class="page active">
+  <div class="hero">
+    <div><p>مرحباً 👋</p><h1>اتعلم كلمات الإنجليزي بطريقتك</h1>
+    <p>أنت اللي تضيف الكلمات اللي عايز تحفظها، وبعدها تدرب عليها.</p>
+    <button class="primary" id="goAdd">+ أضف أول كلمة</button></div>
+    <div class="heroIcon">A → Z</div>
+  </div>
+  <div class="cards">
+    <div class="card"><b id="homeCount">0</b><span>كلمة</span></div>
+    <div class="card"><b id="homeAnswers">0</b><span>إجابة</span></div>
+    <div class="card"><b id="homeAccuracy">0%</b><span>الدقة</span></div>
+  </div>
+</section>
+
+<section id="words" class="page">
+  <div class="title"><div><p>VOCABULARY</p><h1>كلماتي</h1></div><button class="primary" id="addBtn">+ إضافة كلمة</button></div>
+  <input class="search" id="search" placeholder="ابحث عن كلمة...">
+  <div id="wordList" class="wordList"></div>
+</section>
+
+<section id="practice" class="page">
+  <div class="title"><div><p>PRACTICE</p><h1>التدريب</h1></div></div>
+  <div id="quizPanel" class="quizPanel"></div>
+</section>
+
+<section id="progress" class="page">
+  <div class="title"><div><p>PROGRESS</p><h1>التقدم</h1></div></div>
+  <div class="progressBox"><b id="progressAccuracy">0%</b><span>دقة إجاباتك</span></div>
+  <div class="cards">
+    <div class="card"><b id="progressWords">0</b><span>كلماتك</span></div>
+    <div class="card"><b id="progressAnswers">0</b><span>إجابات</span></div>
+  </div>
+</section>
+</main>
+</div>
+
+<div class="modal" id="modal">
+ <div class="modalBox">
+  <button class="close" id="closeModal">×</button>
+  <h2>إضافة كلمة جديدة</h2>
+  <label>الكلمة بالإنجليزي<input id="newEn" placeholder="مثال: Evidence"></label>
+  <label>المعنى بالعربي<input id="newAr" placeholder="مثال: دليل"></label>
+  <label>جملة (اختياري)<input id="newEx" placeholder="مثال: We need evidence."></label>
+  <button class="primary full" id="saveWord">حفظ الكلمة</button>
+ </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
